@@ -1,4 +1,4 @@
-package com.malkinfo.loginpageui
+package com.utm.loginpageui2
 
 import android.content.Intent
 import android.os.Build
@@ -8,8 +8,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.LinearLayoutCompat
-import com.utm.loginpageui2.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             logIn.setTextColor(resources.getColor(R.color.textcolor,null))
         }
         signIn.setOnClickListener {
-            startActivity(Intent(this@MainActivity,NewActivity::class.java))
+            startActivity(Intent(this@MainActivity, NewActivity::class.java))
         }
     }
 }
