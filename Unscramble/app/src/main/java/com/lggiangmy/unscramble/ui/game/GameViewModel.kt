@@ -6,10 +6,7 @@ import android.text.SpannableString
 import android.text.style.TtsSpan
 import android.util.Log
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 
 class GameViewModel : ViewModel() {
     private val _score = MutableLiveData(0)
@@ -22,7 +19,7 @@ class GameViewModel : ViewModel() {
 
     private val _currentScrambledWord = MutableLiveData<String>()
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    val currentScrambledWord: LiveData<Spannable> = Transformations.map(_currentScrambledWord) {
+    val currentScrambledWord: LiveData<Spannable> = _currentScrambledWord.map {
         if (it == null) {
             SpannableString("")
         } else {

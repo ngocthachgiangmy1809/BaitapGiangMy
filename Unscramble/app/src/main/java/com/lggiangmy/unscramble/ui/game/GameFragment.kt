@@ -12,7 +12,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lggiangmy.unscramble.R
 import com.lggiangmy.unscramble.databinding.GameFragmentBinding
 
-
 class GameFragment : Fragment() {
 
     private val viewModel: GameViewModel by viewModels()
